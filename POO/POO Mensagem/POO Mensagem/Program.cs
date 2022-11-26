@@ -14,7 +14,7 @@ namespace POO_Mensagem
             msg1 = new Mensagem();
             msg1.TextoMensagem = "Olá Mundo!";
 
-            Console.WriteLine(msg1.TextoMensagem);
+            msg1.exibirMensage();
 
             Console.ReadKey();
 

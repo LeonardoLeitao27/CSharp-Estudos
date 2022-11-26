@@ -9,5 +9,11 @@ namespace POO_Mensagem
     internal class Mensagem
     {
         public string TextoMensagem;
+
+
+        public void exibirMensage()
+        {
+            Console.WriteLine(this.TextoMensagem);
+        }
     }
 }
