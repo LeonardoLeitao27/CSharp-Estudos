@@ -10,6 +10,14 @@ namespace POO_Mensagem
     {
         static void Main(string[] args)
         {
+            Mensagem msg1;
+            msg1 = new Mensagem();
+            msg1.TextoMensagem = "Olá Mundo!";
+
+            Console.WriteLine(msg1.TextoMensagem);
+
+            Console.ReadKey();
+
         }
     }
 }

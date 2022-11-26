@@ -8,5 +8,6 @@ namespace POO_Mensagem
 {
     internal class Mensagem
     {
+        public string TextoMensagem;
     }
 }
