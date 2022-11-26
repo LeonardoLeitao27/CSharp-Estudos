@@ -12,9 +12,13 @@ namespace POO_Mensagem
         {
             Mensagem msg1;
             msg1 = new Mensagem();
-            msg1.TextoMensagem = "Olá Mundo!";
+            msg1.setTextoMensagem("Olá mundo!");
 
-            msg1.exibirMensage();
+
+            //Usa o método getTextoMensagem para retornar o valor da classe privada do objeto mensagem
+            Console.WriteLine(msg1.getTextoMensagem());
+
+            //msg1.exibirMensage();
 
             Console.ReadKey();
 

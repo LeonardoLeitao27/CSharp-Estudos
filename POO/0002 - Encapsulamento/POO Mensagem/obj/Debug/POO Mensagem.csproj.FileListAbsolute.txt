@@ -6,3 +6,11 @@ C:\Users\Leo\Desktop\CSharp-Estudos\POO\POO Mensagem\POO Mensagem\obj\Debug\POO 
 C:\Users\Leo\Desktop\CSharp-Estudos\POO\POO Mensagem\POO Mensagem\obj\Debug\POO Mensagem.csproj.CoreCompileInputs.cache
 C:\Users\Leo\Desktop\CSharp-Estudos\POO\POO Mensagem\POO Mensagem\obj\Debug\POO Mensagem.exe
 C:\Users\Leo\Desktop\CSharp-Estudos\POO\POO Mensagem\POO Mensagem\obj\Debug\POO Mensagem.pdb
+C:\Users\Leo\Desktop\CSharp-Estudos\POO\0002 - Encapsulamento\POO Mensagem\bin\Debug\POO Mensagem.exe.config
+C:\Users\Leo\Desktop\CSharp-Estudos\POO\0002 - Encapsulamento\POO Mensagem\bin\Debug\POO Mensagem.exe
+C:\Users\Leo\Desktop\CSharp-Estudos\POO\0002 - Encapsulamento\POO Mensagem\bin\Debug\POO Mensagem.pdb
+C:\Users\Leo\Desktop\CSharp-Estudos\POO\0002 - Encapsulamento\POO Mensagem\obj\Debug\POO Mensagem.csproj.AssemblyReference.cache
+C:\Users\Leo\Desktop\CSharp-Estudos\POO\0002 - Encapsulamento\POO Mensagem\obj\Debug\POO Mensagem.csproj.SuggestedBindingRedirects.cache
+C:\Users\Leo\Desktop\CSharp-Estudos\POO\0002 - Encapsulamento\POO Mensagem\obj\Debug\POO Mensagem.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\CSharp-Estudos\POO\0002 - Encapsulamento\POO Mensagem\obj\Debug\POO Mensagem.exe
+C:\Users\Leo\Desktop\CSharp-Estudos\POO\0002 - Encapsulamento\POO Mensagem\obj\Debug\POO Mensagem.pdb

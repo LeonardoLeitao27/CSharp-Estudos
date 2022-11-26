@@ -8,12 +8,27 @@ namespace POO_Mensagem
 {
     internal class Mensagem
     {
-        public string TextoMensagem;
+        private string TextoMensagem;
 
-
+        //Exibir a classe TextoMensagem do objeto mensagem.
         public void exibirMensage()
         {
             Console.WriteLine(this.TextoMensagem);
         }
+
+        //Método de acesso
+        //Retornar o valor privado
+        public string getTextoMensagem()
+        {
+            return this.TextoMensagem;
+        }
+
+        //Método de acesso
+        //Alterar o valor privado
+        public void setTextoMensagem(String valor)
+        {
+            this.TextoMensagem = valor;
+        }
+
     }
 }
