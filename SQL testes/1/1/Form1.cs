@@ -21,6 +21,27 @@ namespace _1
 
         private void btnTestar_Click(object sender, EventArgs e)
         {
+            if(checkBox1.Checked == true)
+            {
+                try
+                {
+                    StreamWriter arquivo = new StreamWriter("ConfigurandoBancoDados.txt", false);
+                    arquivo.WriteLine(txtInstancia.Text);
+                    arquivo.WriteLine(txtBanco.Text);
+                    arquivo.WriteLine(txtUsuario.Text);
+                    arquivo.WriteLine(txtSenha.Text);
+                    arquivo.Close();
+                    MessageBox.Show("Arquivo gravado com sucesso");
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message);
+
+                }
+            }
+
+
+
             try
             {
                 string connetionString;
@@ -73,25 +94,6 @@ namespace _1
             catch (Exception erros)
             {
                 MessageBox.Show(erros.Message);
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {   //Botão de gravar as informações de entrada do banco de dados
-            try
-            {
-                StreamWriter arquivo = new StreamWriter("ConfigurandoBancoDados.txt", false);
-                arquivo.WriteLine(txtInstancia.Text);
-                arquivo.WriteLine(txtBanco.Text);
-                arquivo.WriteLine(txtUsuario.Text);
-                arquivo.WriteLine(txtSenha.Text);
-                arquivo.Close();
-                MessageBox.Show("Arquivo gravado com sucesso");
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message);
-               
             }
         }
     }
