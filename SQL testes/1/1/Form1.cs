@@ -20,18 +20,20 @@ namespace _1
         }
 
         private void btnTestar_Click(object sender, EventArgs e)
-        {
+        {   
+            //condição para salvar as informações da tela de acesso ao banco
             if(checkBox1.Checked == true)
             {
                 try
                 {
+                    //escrever o arquivo que vai conter as informações de acesso ao banco
                     StreamWriter arquivo = new StreamWriter("ConfigurandoBancoDados.txt", false);
                     arquivo.WriteLine(txtInstancia.Text);
                     arquivo.WriteLine(txtBanco.Text);
                     arquivo.WriteLine(txtUsuario.Text);
                     arquivo.WriteLine(txtSenha.Text);
                     arquivo.Close();
-                    MessageBox.Show("Arquivo gravado com sucesso");
+                    
                 }
                 catch (Exception erro)
                 {
