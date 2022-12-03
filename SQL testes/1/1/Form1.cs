@@ -20,9 +20,15 @@ namespace _1
         }
 
         private void btnTestar_Click(object sender, EventArgs e)
-        {   
+        {
+
+            if (string.IsNullOrWhiteSpace(txtInstancia.Text) || string.IsNullOrWhiteSpace(txtBanco.Text) || string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtSenha.Text))
+            {
+                MessageBox.Show("Preencha todos os campos");
+            }
+            
             //condição para salvar as informações da tela de acesso ao banco
-            if(checkBox1.Checked == true)
+            else if(checkBox1.Checked == true)
             {
                 try
                 {
@@ -42,29 +48,32 @@ namespace _1
                 }
             }
 
-
-
-            try
+            else
             {
-                string connetionString;
-                SqlConnection cnn;
-                //nota sobre connetionString
-                //Source: nome da instancia do SQL(Server name)
-                //Initial catalog: nome do banco
-                //id: id do usuario, nesse caso o teste
-                //password: password daquele usuario
-                //connetionString = @"Data Source=DESKTOP-VPP5IMI;Initial Catalog=IS_Administrativo;User ID=teste;Password=123";
-                connetionString = @"Data Source=" + txtInstancia.Text + ";Initial Catalog=" + txtBanco.Text + ";User ID=" + txtUsuario.Text + ";Password=" + txtSenha.Text ;
-                cnn = new SqlConnection(connetionString);
-                cnn.Open();
-                MessageBox.Show("Connection Open !");
-                cnn.Close();
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro ao se conectar no banco de dados \n" + "Verifique os dados informados" + erro);
+                try
+                {
+                    string connetionString;
+                    SqlConnection cnn;
+                    //nota sobre connetionString
+                    //Source: nome da instancia do SQL(Server name)
+                    //Initial catalog: nome do banco
+                    //id: id do usuario, nesse caso o teste
+                    //password: password daquele usuario
+                    //connetionString = @"Data Source=DESKTOP-VPP5IMI;Initial Catalog=IS_Administrativo;User ID=teste;Password=123";
+                    connetionString = @"Data Source=" + txtInstancia.Text + ";Initial Catalog=" + txtBanco.Text + ";User ID=" + txtUsuario.Text + ";Password=" + txtSenha.Text;
+                    cnn = new SqlConnection(connetionString);
+                    cnn.Open();
+                    MessageBox.Show("Connection Open !");
+                    cnn.Close();
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro ao se conectar no banco de dados \n" + "Verifique os dados informados" + erro);
 
+                }
             }
+
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
