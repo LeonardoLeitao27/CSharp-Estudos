@@ -37,11 +37,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTestar
             // 
-            this.btnTestar.Location = new System.Drawing.Point(134, 116);
+            this.btnTestar.Location = new System.Drawing.Point(36, 116);
             this.btnTestar.Name = "btnTestar";
             this.btnTestar.Size = new System.Drawing.Size(82, 23);
             this.btnTestar.TabIndex = 0;
@@ -115,11 +116,22 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Senha";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(222, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Gravar dados";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(370, 167);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -131,6 +143,7 @@
             this.Controls.Add(this.btnTestar);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,6 +160,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
 

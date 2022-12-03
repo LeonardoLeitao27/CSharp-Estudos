@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,47 @@ namespace _1
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                StreamReader arquivo = new StreamReader("ConfigurandoBancoDados.txt");
+                txtInstancia.Text = arquivo.ReadLine();
+                txtBanco.Text = arquivo.ReadLine();
+                txtUsuario.Text = arquivo.ReadLine();
+                txtSenha.Text = arquivo.ReadLine();
+                arquivo.Close();
+            }
+            catch (SqlException errob)
+            {
+                MessageBox.Show(errob.Message);
+
+            }
+            catch (Exception erros)
+            {
+                MessageBox.Show(erros.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {   //Botão de gravar as informações de entrada do banco de dados
+            try
+            {
+                StreamWriter arquivo = new StreamWriter("ConfigurandoBancoDados.txt", false);
+                arquivo.WriteLine(txtInstancia.Text);
+                arquivo.WriteLine(txtBanco.Text);
+                arquivo.WriteLine(txtUsuario.Text);
+                arquivo.WriteLine(txtSenha.Text);
+                arquivo.Close();
+                MessageBox.Show("Arquivo gravado com sucesso");
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+               
+            }
         }
     }
 }
