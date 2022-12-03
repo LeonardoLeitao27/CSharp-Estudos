@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -106,6 +107,30 @@ namespace _1
             {
                 MessageBox.Show(erros.Message);
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.Height = 500;
+            lblInstancia.Text = "Buscando instancia, por favor aguarde";
+            dgvInstancias.DataSource = null;
+            SqlDataSourceEnumerator sqls = SqlDataSourceEnumerator.Instance;
+            Refresh();
+            dgvInstancias.DataSource = sqls.GetDataSources();
+            if (dgvInstancias.Rows.Count == 0)
+            {
+                lblInstancia.Text = "Não consegui encontrar nenhuma instancia, favor avisar ao TI";
+            }
+            else
+            {
+                lblInstancia.Text = "Busca concluida";
+            }
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

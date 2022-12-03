@@ -38,6 +38,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dgvInstancias = new System.Windows.Forms.DataGridView();
+            this.lblInstancia = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInstancias)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTestar
@@ -133,11 +137,42 @@
             this.checkBox1.Text = "Salvar informações ";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(222, 11);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // dgvInstancias
+            // 
+            this.dgvInstancias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInstancias.Location = new System.Drawing.Point(41, 209);
+            this.dgvInstancias.Name = "dgvInstancias";
+            this.dgvInstancias.Size = new System.Drawing.Size(240, 150);
+            this.dgvInstancias.TabIndex = 6;
+            // 
+            // lblInstancia
+            // 
+            this.lblInstancia.AutoSize = true;
+            this.lblInstancia.Location = new System.Drawing.Point(41, 193);
+            this.lblInstancia.Name = "lblInstancia";
+            this.lblInstancia.Size = new System.Drawing.Size(35, 13);
+            this.lblInstancia.TabIndex = 8;
+            this.lblInstancia.Text = "label6";
+            this.lblInstancia.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 183);
+            this.ClientSize = new System.Drawing.Size(367, 181);
+            this.Controls.Add(this.lblInstancia);
+            this.Controls.Add(this.dgvInstancias);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -152,6 +187,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInstancias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +205,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridView dgvInstancias;
+        private System.Windows.Forms.Label lblInstancia;
     }
 }
 
